@@ -1,7 +1,7 @@
 # Retrospective
 
-- name: Jane Doe
-- email: janedoe@u.boisestate.edu
+- name: Benjamin Davies
+- email: benjamindavies@u.boisestate.edu
 
 ## Instructions
 
@@ -21,7 +21,7 @@ Be safe CITE!
 
 ## Experience
 
-TODO
+Drawing the pictures was fairly easy since I have used Paint 3d quite a bit. I had a rough idea for the website in mind, but visualizing it within pictures made it seem more doable and kind of gives me a plan of action.
 
 ## Known issues or Bugs
 
