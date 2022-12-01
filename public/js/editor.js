@@ -40,11 +40,11 @@ const uploadImage = (uploadFile, uploadType) => {
     }
 }
 
-const addImage = (imagepath, alt) => {
-    let curPos = articleFeild.selectionStart;
-    let textToInsert = `\r![${alt}](${imagepath})\r`;
-    articleFeild.value = articleFeild.value.slice(0, curPos) + textToInsert + articleFeild.value.slice(curPos);
-}
+// const addImage = (imagepath, alt) => {
+//     let curPos = articleFeild.selectionStart;
+//     let textToInsert = `\r![${alt}](${imagepath})\r`;
+//     articleFeild.value = articleFeild.value.slice(0, curPos) + textToInsert + articleFeild.value.slice(curPos);
+// }
 
 let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
@@ -58,11 +58,10 @@ publishBtn.addEventListener('click', () => {
             id += letters[Math.floor(Math.random() * letters.length)];
         }
 
-        // setting up docName
+       
         let docName = `${blogTitle}-${id}`;
         let date = new Date(); // for published at info
 
-        //access firstore with db variable;
         db.collection("blogs").doc(docName).set({
             title: blogTitleField.value,
             article: articleFeild.value,
