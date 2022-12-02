@@ -21,12 +21,18 @@ Be safe CITE!
 
 ## Experience
 
-Drawing the pictures was fairly easy since I have used Paint 3d quite a bit. I had a rough idea for the website in mind, but visualizing it within pictures made it seem more doable and kind of gives me a plan of action.
+Drawing the pictures was fairly easy since I have used Paint 3d quite a bit. I had a rough idea for the website in mind, but visualizing it within pictures made it seem more doable and kind of gives me a plan of action. This was a very difficult project for me, mainly because I did not understand how to use a database for entries. I had my brother help me with some of it because he has experience in Full Stack Development. For the main html, I just went with a pretty basic structure. I ended up using google firebase as my database because it seemed like the simplest option, and did not involve too much to link my javascript and html code to it. In its current form, the website is run via NPM START and it runs on my localhost on my machine.
 
 ## Known issues or Bugs
 
-TODO
+I did have issues at first with the image on the blog writing screen, but I removed it because it was not worth spending too much time on. Can only be run locally, not available for public use.
 
 ## Sources used
 
-TODO
+console.firebase.google.com
+
+geeksforgeeks.com - firebase tutorial
+
+w3schools.com -css formatting, js scripts, node.js tutorials
+
+
