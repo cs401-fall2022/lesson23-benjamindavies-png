@@ -9,36 +9,36 @@ let bannerPath;
 const publishBtn = document.querySelector('.publish-btn');
 const uploadInput = document.querySelector('#image-upload');
 
-bannerImage.addEventListener('change', () => {
-    uploadImage(bannerImage, "banner");
-})
+// bannerImage.addEventListener('change', () => {
+//     uploadImage(bannerImage, "banner");
+// })
 
-uploadInput.addEventListener('change', () => {
-    uploadImage(uploadInput, "image");
-})
+// uploadInput.addEventListener('change', () => {
+//     uploadImage(uploadInput, "image");
+// })
 
-const uploadImage = (uploadFile, uploadType) => {
-    const [file] = uploadFile.files;
-    if(file && file.type.includes("image")){
-        const formdata = new FormData();
-        formdata.append('image', file);
+// const uploadImage = (uploadFile, uploadType) => {
+//     const [file] = uploadFile.files;
+//     if(file && file.type.includes("image")){
+//         const formdata = new FormData();
+//         formdata.append('image', file);
 
-        fetch('/upload', {
-            method: 'post',
-            body: formdata
-        }).then(res => res.json())
-        .then(data => {
-            if(uploadType == "image"){
-                addImage(data, file.name);
-            } else{
-                bannerPath = `${location.origin}/${data}`;
-                banner.style.backgroundImage = `url("${bannerPath}")`;
-            }
-        })
-    } else{
-        alert("upload Image only");
-    }
-}
+//         fetch('/upload', {
+//             method: 'post',
+//             body: formdata
+//         }).then(res => res.json())
+//         .then(data => {
+//             if(uploadType == "image"){
+//                 addImage(data, file.name);
+//             } else{
+//                 bannerPath = `${location.origin}/${data}`;
+//                 banner.style.backgroundImage = `url("${bannerPath}")`;
+//             }
+//         })
+//     } else{
+//         alert("upload Image only");
+//     }
+// }
 
 // const addImage = (imagepath, alt) => {
 //     let curPos = articleFeild.selectionStart;
@@ -59,13 +59,13 @@ publishBtn.addEventListener('click', () => {
         }
 
        
-        let docName = `${blogTitle}-${id}`;
+        let docName = `${blogTitle}-${id}`;   
         let date = new Date(); // for published at info
 
         db.collection("blogs").doc(docName).set({
             title: blogTitleField.value,
             article: articleFeild.value,
-            bannerImage: bannerPath,
+            // bannerImage: bannerPath,
             publishedAt: `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`
         })
         .then(() => {
